@@ -1,11 +1,116 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hola Mundo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio | Héctor Tovar</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Hola Mundo</h1>
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">Portafolio</div>
+      <ul class="nav-links">
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#tech">Tecnologías</a></li>
+        <li><a href="#contact">Contacto</a></li>
+        <li><a href="#" class="resume-btn">Resume</a></li>
+      </ul>
+      <button class="menu-toggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <section class="hero">
+      <div class="hero-img">
+        <img src="https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Decoración minimalista con planta" />
+      </div>
+      <div class="hero-content">
+        <h1>Hola, soy Héctor Tovar</h1>
+        <p>Soy un desarrollador web junior apasionado por crear aplicaciones web modernas, responsivas e intuitivas. Disfruto transformar ideas en soluciones funcionales y elegantes a través de un código limpio y eficiente.</p>
+        <div class="hero-social">
+          <a href="https://x.com/HectorT33838505" target="_blank" rel="noopener" aria-label="Twitter"><svg width="40" height="40" fill="currentColor"><use href="#icon-twitter" /></svg><span>Twitter</span></a>
+          <a href="https://github.com/htovar21" target="_blank" rel="noopener" aria-label="GitHub"><svg width="40" height="40" fill="currentColor"><use href="#icon-github" /></svg><span>GitHub</span></a>
+          <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="40" height="40" fill="currentColor"><use href="#icon-linkedin" /></svg><span>LinkedIn</span></a>
+        </div>
+      </div>
+    </section>
+  </header>
+  <main>
+    <section id="about" class="about section">
+      <h2>Sobre mí</h2>
+      <p>Soy un desarrollador web junior con una sólida base en tecnologías front-end. Estoy motivado por aprender constantemente y contribuir en proyectos innovadores. Mi objetivo es crear experiencias web accesibles, funcionales y con impacto positivo en los usuarios.</p>
+    </section>
+    <section id="projects" class="projects section">
+      <h2>Proyectos</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Web de Ventas de inmuebles">
+          <div class="project-info">
+            <h3>Proyecto 2: Web de Ventas de inmuebles</h3>
+            <p>Página web de para venta de inmuebles.</p>
+            <a class="project-btn" href="https://github.com/yormanbalanD/proyecto__software_I" target="_blank" rel="noopener" aria-label="Ver más sobre Web de Ventas de inmuebles">Ver más</a>
+          </div>
+        </article>
+        <article class="project-card">
+          <img src="https://images.pexels.com/photos/4549415/pexels-photo-4549415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="App Screen Share">
+          <div class="project-info">
+            <h3>Proyecto 2: App Screen Share</h3>
+            <p>Aplicación móvil para compartir la pantalla del manera segura a otros teléfonos Android.</p>
+            <a class="project-btn" href="https://github.com/keimelR/ScreenShare" target="_blank" rel="noopener" aria-label="Ver más sobre App Screen Share">Ver más</a>
+          </div>
+        </article>
+        <article class="project-card">
+          <img src="https://images.pexels.com/photos/3296547/pexels-photo-3296547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Aplicacion Foodigo">
+          <div class="project-info">
+            <h3>Proyecto 3: Aplicacion Foodigo</h3>
+            <p>Una app móvil para ubicar restaurantes cercanos mediante la toma de una foto en un ángulo o dirección.</p>
+            <a class="project-btn" href="https://github.com/yormanbalanD/frontend_proyecto_software2" target="_blank" rel="noopener" aria-label="Ver más sobre Aplicacion Foodigo">Ver más</a>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section id="tech" class="tech section">
+      <h2>Tecnologías</h2>
+      <div class="tech-list">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>React</span>
+        <span>Node.js</span>
+        <span>Express.js</span>
+        <span>MongoDB</span>
+        <span>Git</span>
+      </div>
+    </section>
+    <section id="contact" class="contact section">
+      <h2>Contáctame</h2>
+      <form id="contactForm" autocomplete="off">
+        <label for="email">Correo</label>
+        <input type="email" id="email" name="email" placeholder="Tu correo" required>
+        <label for="message">Mensaje</label>
+        <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+        <p class="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-social">
+      <a href="https://x.com/HectorT33838505" target="_blank" rel="noopener" aria-label="Twitter"><svg width="32" height="32" fill="currentColor"><use href="#icon-twitter" /></svg><span>Twitter</span></a>
+      <a href="https://github.com/htovar21" target="_blank" rel="noopener" aria-label="GitHub"><svg width="32" height="32" fill="currentColor"><use href="#icon-github" /></svg><span>GitHub</span></a>
+      <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="32" height="32" fill="currentColor"><use href="#icon-linkedin" /></svg><span>LinkedIn</span></a>
+    </div>
+    <p>© 2025 Héctor Tovar. All rights reserved.</p>
+  </footer>
+  <svg style="display:none">
+    <symbol id="icon-twitter" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.59-2.47.7a4.3 4.3 0 0 0 1.88-2.37 8.59 8.59 0 0 1-2.72 1.04A4.28 4.28 0 0 0 16.11 4c-2.37 0-4.29 1.92-4.29 4.29 0 .34.04.67.11.99C7.69 9.13 4.07 7.38 1.64 4.77c-.37.64-.58 1.38-.58 2.17 0 1.5.76 2.82 1.92 3.6a4.28 4.28 0 0 1-1.94-.54v.05c0 2.1 1.5 3.85 3.5 4.25-.36.1-.74.16-1.13.16-.28 0-.54-.03-.8-.08.54 1.7 2.1 2.94 3.95 2.97A8.6 8.6 0 0 1 2 19.54c-.28 0-.56-.02-.83-.05A12.13 12.13 0 0 0 8.29 21.5c7.55 0 11.68-6.26 11.68-11.68 0-.18-.01-.36-.02-.54A8.18 8.18 0 0 0 24 4.59a8.36 8.36 0 0 1-2.54.7z"/></symbol>
+    <symbol id="icon-github" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.49 2.87 8.3 6.84 9.64.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.18-1.1-1.5-1.1-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05A9.36 9.36 0 0 1 12 7.43c.85.004 1.71.12 2.51.35 1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.07.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/></symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm15.5 11.28h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.88v1.36h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v5.59z"/></symbol>
+  </svg>
+  <script src="script.js"></script>
 </body>
-</html>
+</html> 
