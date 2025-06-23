@@ -17,7 +17,9 @@
     "portfolio",
     "web",
     "mongodb",
-    "express"
+    "express",
+    "render",
+    "deployment"
   ],
   "author": "Héctor Tovar",
   "license": "ISC",
@@ -26,6 +28,10 @@
   },
   "homepage": "https://github.com/htovar21/Hola-mundo#readme",
   "description": "Portfolio personal con integración de MongoDB Atlas",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
   "dependencies": {
     "dotenv": "^16.3.0",
     "express": "^5.1.0",

@@ -1,5 +1,9 @@
 const mongoose = require('mongoose');
-require('dotenv').config({ path: './config.env' });
+
+// Cargar variables de entorno desde archivo local (solo en desarrollo)
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config({ path: './config.env' });
+}
 
 const connectDB = async () => {
   try {
