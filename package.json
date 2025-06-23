@@ -1,23 +1,37 @@
 {
   "name": "hola-mundo",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "seed": "node scripts/seedData.js",
+    "test:connection": "node scripts/testConnection.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/htovar21/Hola-mundo.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "portfolio",
+    "web",
+    "mongodb",
+    "express"
+  ],
+  "author": "Héctor Tovar",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/htovar21/Hola-mundo/issues"
   },
   "homepage": "https://github.com/htovar21/Hola-mundo#readme",
-  "description": "",
+  "description": "Portfolio personal con integración de MongoDB Atlas",
   "dependencies": {
-    "express": "^5.1.0"
+    "dotenv": "^16.3.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }

@@ -24,12 +24,26 @@ body {
   color: var(--text);
   min-height: 100vh;
   line-height: 1.6;
+  padding-top: 80px;
 }
 
 .header {
   background: var(--bg-alt);
   box-shadow: var(--shadow);
   border-bottom: 1px solid var(--border);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  background: rgba(35, 38, 43, 0.95);
+  transition: all 0.3s ease;
+}
+
+.header.scrolled {
+  background: rgba(35, 38, 43, 0.98);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .navbar {
@@ -62,6 +76,10 @@ body {
   color: var(--accent);
   background: var(--border);
 }
+.nav-links a.active {
+  color: var(--accent);
+  background: var(--border);
+}
 .resume-btn {
   border: 1px solid var(--accent);
   color: var(--accent);
@@ -91,7 +109,7 @@ body {
   align-items: center;
   gap: 2.5rem;
   max-width: 1100px;
-  margin: 2.5rem auto 0 auto;
+  margin: 1rem auto 0 auto;
   padding: 2rem 2vw 0 2vw;
   flex-wrap: wrap;
 }
@@ -126,7 +144,7 @@ body {
 }
 .section {
   max-width: 1100px;
-  margin: 2.5rem auto;
+  margin: 3rem auto;
   padding: 0 2vw;
   opacity: 0;
   transform: translateY(40px);
@@ -242,10 +260,27 @@ body {
   transform: translateY(-2px) scale(1.04);
 }
 .form-status {
-  min-height: 1.2em;
-  font-size: 0.98rem;
+  margin-top: 1rem;
+  padding: 0.8rem;
+  border-radius: var(--radius);
+  font-weight: 500;
+  text-align: center;
+  transition: all var(--transition);
+}
+.form-status.loading {
+  background: rgba(94, 234, 212, 0.1);
   color: var(--accent);
-  margin-top: 0.2em;
+  border: 1px solid var(--accent);
+}
+.form-status.success {
+  background: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+  border: 1px solid #22c55e;
+}
+.form-status.error {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border: 1px solid #ef4444;
 }
 .footer {
   border-top: 1px solid var(--border);
@@ -330,13 +365,19 @@ body {
   }
 }
 @media (max-width: 700px) {
+  body {
+    padding-top: 70px;
+  }
+  
   .navbar {
     flex-direction: row;
     padding: 1rem 4vw;
   }
+  
   .nav-links {
     position: fixed;
-    top: 0; right: -100vw;
+    top: 0; 
+    right: -100vw;
     height: 100vh;
     width: 70vw;
     background: var(--bg-alt);
@@ -347,19 +388,29 @@ body {
     box-shadow: var(--shadow);
     transition: right var(--transition);
     z-index: 100;
+    backdrop-filter: blur(10px);
+    background: rgba(35, 38, 43, 0.98);
   }
+  
   .nav-links.open {
     right: 0;
   }
+  
   .menu-toggle {
     display: flex;
   }
+  
   .footer-social a {
     font-size: 2.7rem;
   }
+  
   .hero-social {
     gap: 1.5rem;
     justify-content: center;
+  }
+  
+  .hero {
+    margin: 4rem auto 0 auto;
   }
 }
 ::-webkit-scrollbar {
